@@ -9,6 +9,7 @@ public class CityWheatherModel {
     private String mCity;
     private float mTemperatureMax;
     private float mTemperatureMin;
+    private String mDescription;
 
     public CityWheatherModel(String city,float max, float min) {
         mCity = city;
@@ -38,5 +39,13 @@ public class CityWheatherModel {
 
     public void setmTemperatureMin(float mTemperatureMin) {
         this.mTemperatureMin = mTemperatureMin;
+    }
+
+    public String getmDescription() {
+        return mDescription;
+    }
+
+    public void setmDescription(String mDescription) {
+        this.mDescription = mDescription;
     }
 }
