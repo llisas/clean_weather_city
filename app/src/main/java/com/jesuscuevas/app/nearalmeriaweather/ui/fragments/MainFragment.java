@@ -2,6 +2,9 @@ package com.jesuscuevas.app.nearalmeriaweather.ui.fragments;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
+
 import com.jesuscuevas.app.nearalmeriaweather.R;
 import com.jesuscuevas.app.nearalmeriaweather.adapters.CitiesWeatherAdapter;
 import com.jesuscuevas.app.nearalmeriaweather.base.BaseFragment;
@@ -22,6 +25,8 @@ public class MainFragment extends BaseFragment implements MainFragmentView {
     private Subscription mSubscription;
     @BindView(R.id.my_cities_weather_list)
     RecyclerView mRecyclerView;
+    @BindView(R.id.fragment_main_progress_bar)
+    ProgressBar mProgressBar;
 
 
     @Override
@@ -47,12 +52,12 @@ public class MainFragment extends BaseFragment implements MainFragmentView {
 
     @Override
     public void showProgressDialog() {
-
+        mProgressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideProgressDialog() {
-
+        mProgressBar.setVisibility(View.INVISIBLE);
     }
 
     private void getObserverRx() {

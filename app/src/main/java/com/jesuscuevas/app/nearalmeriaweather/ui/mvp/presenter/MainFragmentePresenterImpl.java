@@ -48,6 +48,7 @@ public class MainFragmentePresenterImpl implements MainFragmentPresenter {
 
             @Override
             public void onCompleted() {
+                mView.hideProgressDialog();
                 mSubscription.unsubscribe();
             }
 
@@ -55,12 +56,12 @@ public class MainFragmentePresenterImpl implements MainFragmentPresenter {
             public void onError(Throwable e) {
                 // Called when the observable encounters an error
                 Log.d(Constans.DEBUG, ">>>> onError gets called : " + e.getMessage());
+                mView.hideProgressDialog();
             }
 
             @Override
             public void onNext(CitiesWeather citiesWeather) {
                 Log.d(Constans.DEBUG, ">>>> SUCCESS)");
-                //findViewAndSetAdapter(citiesWeather);
                 mView.showRecycleView(citiesWeather);
             }};
 
