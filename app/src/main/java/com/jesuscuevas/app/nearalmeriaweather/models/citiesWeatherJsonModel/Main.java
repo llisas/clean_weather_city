@@ -9,7 +9,7 @@ public class Main {
     @SerializedName("humidity")
     private Long mHumidity;
     @SerializedName("pressure")
-    private Long mPressure;
+    private float mPressure;
     @SerializedName("temp")
     private Double mTemp;
     @SerializedName("temp_max")
@@ -25,11 +25,11 @@ public class Main {
         mHumidity = humidity;
     }
 
-    public Long getPressure() {
+    public float getPressure() {
         return mPressure;
     }
 
-    public void setPressure(Long pressure) {
+    public void setPressure(float pressure) {
         mPressure = pressure;
     }
 

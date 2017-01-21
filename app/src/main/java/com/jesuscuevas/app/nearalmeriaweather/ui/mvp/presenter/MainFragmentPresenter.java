@@ -10,7 +10,7 @@ import rx.Observer;
 import rx.Subscription;
 
 public interface MainFragmentPresenter {
-    void getApiService();//no rx here
+    void getApiService();//no rx is this call
     Observer<CitiesWeather> getRxObject();//whit rx
     Subscription geRxApiSubscription(Observer<CitiesWeather> observer);
     void setRecycleView(RecyclerView view, CitiesWeather citiesWeather);
